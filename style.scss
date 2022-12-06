@@ -1,0 +1,477 @@
+@import "variables";
+@import "mixin";
+@import "reset";
+
+//HEADER
+
+#header{
+ position: fixed;
+  z-index: 99;
+  width: 100%;
+  background: rgba(68, 159, 37, 0.15);
+  backdrop-filter: blur(4px);
+  padding: 10px 0;
+  .header{
+    padding: 10px 0;
+    @include between();
+    &--nav{
+      a{
+        font-weight: 500;
+        font-size: 16px;
+        color: #254d18;
+        transition: .4s;
+        margin-left: 30px;
+        &:hover{
+          color: $bl;
+        }
+      }
+
+    }
+    button{
+      @include btn();
+    }
+  }
+}
+
+//HERO
+
+#hero{
+  background: #EBFFE4;
+.container{
+  width:100%;
+
+  .hero{
+    background: url("../img/hero-grup.png")no-repeat right;
+    margin: 0 0 0 40px;
+    @include between();
+    flex-wrap: wrap;
+    &--tittle{
+      padding: 150px 0 50px 0;
+      &__start{
+        img{
+          margin-left: 15px;
+        }
+
+        @include center();
+        h6{
+          font-weight: 600;
+          font-size: 22px;
+          color:$gr;
+        }
+      }
+      h1{
+        padding: 15px 0 25px 0;
+        font-weight: 700;
+        font-size: 61px;
+        color: $bg;
+      }
+      p{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $bg;
+
+      }
+      h2{
+        padding: 14px 0 10px 0;
+        font-weight: 400;
+        font-size: 16px;
+        color: $bg;
+        span{
+          color: $gr;
+        }
+      }
+      h5{
+        font-weight: 700;
+        font-size: 31px;
+        color: $gr;
+        span{
+          font-weight: 600;
+          font-size: 22px;
+          text-decoration: line-through;
+          margin-left: 10px;
+        }
+      }
+      &__btn{
+        margin: 37px 0 80px 0;
+        &--btn1{
+          @include btn();
+        }
+        &--btn2{
+          margin-left: 15px;
+          @include btn();
+          background: 0;
+          border: 1px solid $gr;
+          color: $gr;
+        }
+      }
+      &__sale{
+        @include center();
+        justify-content: flex-start;
+        &--left{
+          @include center();
+          flex-direction: column;
+          h4{
+            font-weight: 700;
+            font-size: 85px;
+            color: $gr;
+          }
+          h3{
+            font-weight: 500;
+            font-size: 16px;
+            color: $bg;
+          }
+
+        }
+        &--right{
+          margin-left: 25px;
+          @include center();
+          flex-direction: column;
+          h4{
+            font-weight: 700;
+            font-size: 85px;
+            color: $gr;
+          }
+          h3{
+            font-weight: 500;
+            font-size: 16px;
+            color: $bg;
+          }
+
+        }
+      }
+
+    }
+    &--left {
+      &__img {
+        height: 100%;
+        position:relative;
+        &--bs {
+
+          width: 90%;
+        }
+        &--araow{
+          position: absolute;
+          top: 227px;
+          left: 33px;
+        }
+        .star {
+          position: absolute;
+          top: 92px;
+          left: 58px;
+
+          &--star {
+            position: relative;
+          }
+
+          &--sale {
+
+            font-weight: 600;
+            font-size: 37px;
+            color: $wh;
+            position: absolute;
+            top: 44px;
+            left: 55px;
+          }
+        }
+
+
+        }
+      &__bottom{
+        @include between();
+        width: 80%;
+        &--blocks{
+          margin-top: 40px;
+          @include center();
+          &__block1{
+            width: 115.21px;
+            height: 115.21px;
+            background: #B6E247;
+            border-radius: 50%;
+            border: 1px solid #F5F5F5;
+            @include center();
+
+          }
+          &__block2{
+            margin: 0px 40px 0 40px;
+            width: 115.21px;
+            height: 115.21px;
+            background:#F5F5F5;
+            border-radius: 50%;
+            border: 1px solid #B6E247;
+            @include center();
+
+          }
+          &__block3{
+            width: 115.21px;
+            height: 115.21px;
+
+            background:#F5F5F5;
+            border-radius: 50%;
+            border: 1px solid #B6E247;
+            @include center();
+
+          }
+
+        }
+
+      }
+
+
+
+
+    }
+    }
+
+
+
+
+  }
+}
+
+
+
+//PRODUCT
+
+#product{
+  padding: 100px 0;
+  .product{
+    &--tittle{
+      h2{
+        font-weight: 700;
+        font-size: 44px;
+        color: $bl;
+        text-align: center;
+      }
+      p{
+        padding: 25px 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        text-align: center;
+        color: #051101;
+        opacity: 0.7;
+      }
+    }
+    &--blocks{
+      @include between();
+      &__block{
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        @include column();
+
+        width: 362px;
+        height: 500px;
+        h2{
+          padding: 19px 0 12px 0;
+          font-weight: 500;
+          font-size: 22px;
+          text-transform: uppercase;
+          color: $bl;
+        }
+        &--img{
+          @include center();
+          width: 362px;
+          height: 300px;
+          border-radius: 50%;
+          background: linear-gradient(360deg, #5CBE3A -33.55%, rgba(92, 190, 58, 0.0860215) 4.82%, rgba(92, 190, 58, 0) 37.59%);
+        }
+        &--stars{
+          @include center();
+          &__star{
+            width: 26px;
+            height: 26px;
+            background: #F1E809;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+          }
+          &__star1{
+            width: 26px;
+            height: 26px;
+            background: #EDEBB9;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+          }
+        }
+        h4{
+          padding: 15px 0;
+          font-weight: 700;
+          font-size: 24px;
+          color: $bl;
+
+        }
+
+        button{
+          @include btn2();
+        }
+
+      }
+    }
+  }
+}
+
+//VIEW
+
+#view{
+  background: url("../img/View.png") no-repeat left;
+  min-width: 100vh;
+  padding: 50px 0;
+  .view{
+
+    position: relative;
+
+    @include between();
+    &--one{
+      width: 618.52px;
+      height: 529.84px;
+      background: #F6FFF3;
+      border-radius: 10px;
+      margin-left: 58px;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      &__tittle{
+        margin-left: 74px;
+      h2{
+
+
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 130%;
+        color: $bg;
+
+      }
+      p{
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $bg;
+        opacity: 0.7;
+      }
+      }
+
+    }
+
+
+    &--two{
+
+      &__img{
+        position: absolute;
+        top: 45px;
+        right: 46px;
+
+        div {
+          position: absolute;
+          top: 174px;
+          left: 255px;
+          @include center();
+          border-radius: 50%;
+          background:$gr;
+          width: 90px;
+          height: 90px;
+          ion-icon{
+            color:$wh;
+            font-size: 50px;
+
+
+          }
+
+
+        }
+        &--img{
+          width: 100%;
+        }
+
+
+      }
+
+    }
+
+
+  }
+  }
+
+
+//BEST
+
+
+#best{
+  padding: 100px 0;
+  background: url("../img/best-nike.png")no-repeat right ;
+
+  .best{
+    @include between();
+    &--left{
+      width: 41%;
+      height: 500px;
+      border: 20px solid #E5F2E1;
+      border-radius: 10px;
+      img{
+        margin: 15px 0px 0 34px
+      }
+    }
+    &--right{
+      width: 50%;
+      @include center();
+
+
+      &__tittle{
+        margin-top: 50px;
+        @include column();
+
+
+     h1{
+      padding-bottom: 25px;
+      font-weight: 700;
+      font-size: 44px;
+      line-height: 130%;
+      color: $bg;
+    }
+    &--block{
+     @include center();
+      padding-bottom: 25px;
+    p{
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      opacity: 0.7;
+      color: $bg;
+    }
+    }
+    }
+    }
+  }
+}
+
+
+
